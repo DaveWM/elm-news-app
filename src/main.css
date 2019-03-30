@@ -38,3 +38,19 @@ h1 {
   text-align: left;
   margin-top: 20px;
 }
+
+.article.loading {
+  opacity: 0.3;
+}
+
+.loading-spinner {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  width: 45px;
+  height: 45px;
+}
+
+.spinner-container {
+  position: relative;
+}
