@@ -53,9 +53,7 @@ update msg model =
               |> Maybe.withDefault Cmd.none
         )
     ResponseReceived (Ok response) -> ({model | articles = response.articles, loading = model.loading - 1}, Cmd.none)
-    ResponseReceived (Err err) -> 
-        let _ = Debug.log "Error: " err in
-        ({model | loading = model.loading - 1}, Cmd.none)
+    ResponseReceived (Err err) -> ({model | loading = model.loading - 1}, Cmd.none)
 
 
 ---- VIEW ----
